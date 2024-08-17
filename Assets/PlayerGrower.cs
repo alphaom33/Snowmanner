@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Transactions;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.Serialization;
 
 public class PlayerGrower : MonoBehaviour
@@ -10,6 +11,8 @@ public class PlayerGrower : MonoBehaviour
     private PlayerMovement playerMovement;
 
     public float animSpeed;
+
+    public UnityEvent death;
 
     [System.Serializable]
     private class OffsetGameObject
@@ -69,7 +72,7 @@ public class PlayerGrower : MonoBehaviour
         bool animated = false;
 
         RaycastHit hit;
-        if (!Physics.Raycast(new Ray(transform.position + (Vector3.up), Vector3.down), out hit, 100, Layers.sandMask | Layers.snowMask))
+        if (!Physics.Raycast(new Ray(transform.position + (Vector3.up), Vector3.down), out hit, 100, Layers.sandMask | Layers.snowMask | Layers.plankMask))
         {
             Debug.Log("nope");
             return;
@@ -88,9 +91,12 @@ public class PlayerGrower : MonoBehaviour
 
             StartCoroutine(Animate());
         }
-        else
+        else if (hit.transform.gameObject.layer == Layers.sand)
         {
-            if (current < 0) return;
+            if (current < 0)
+            {
+                death.Invoke();
+            }
 
             start =  parts[current].GetScaleOffset();
             end = 0;

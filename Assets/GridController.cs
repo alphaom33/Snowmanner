@@ -12,6 +12,7 @@ public class GridController : MonoBehaviour
     public float scaleFactor;
 
     public float tileScale = PlayerMovement.gridSize;
+    public int layer;
 
     [EditorCools.Button]
     private void GenGrid()
@@ -44,6 +45,8 @@ public class GridController : MonoBehaviour
 
 
                 tile.GetComponent<MeshRenderer>().material = i % 2 == 1 ^ j % 2 == 0 ? mat1 : mat2;
+
+                tile.layer = layer;
             }
         }
     }

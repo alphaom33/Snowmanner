@@ -25,7 +25,7 @@ public class PlayerMovement : MonoBehaviour
     void GetInput()
     {
         Vector3 input = new(-Input.GetAxisRaw("Horizontal"), 0, -Input.GetAxisRaw("Vertical"));
-        if (input.magnitude > 0 && !running)
+        if (input.magnitude > 0 && !running && !LookAhead(input))
         {
             moved.Invoke(input);
             StartCoroutine(Pos(input));
@@ -44,5 +44,11 @@ public class PlayerMovement : MonoBehaviour
             yield return new WaitForEndOfFrame();
         }
         running = false;
+    }
+
+    bool LookAhead(Vector3 input)
+    {
+        Vector3 filtered = Vector3Int.RoundToInt(input);
+        return Physics.CheckBox(transform.position + (filtered * gridSize), Vector3.one * gridSize / 2, transform.rotation, Layers.wallMask);
     }
 }
