@@ -12,7 +12,7 @@ public class PlayerGrower : MonoBehaviour
 
     public float animSpeed;
 
-    public UnityEvent death;
+    public static UnityEvent death = new();
 
     [System.Serializable]
     private class OffsetGameObject
@@ -34,6 +34,13 @@ public class PlayerGrower : MonoBehaviour
     }
     [SerializeField] List<OffsetGameObject> parts;
     public int current;
+
+    public void ResetSnowman()
+    {
+        current = 0;
+        parts[current].gameObject.SetActive(true);
+        parts[current].SetScale(parts[current].startScale);
+    }
 
     // Start is called before the first frame update
     void Start()
@@ -77,7 +84,6 @@ public class PlayerGrower : MonoBehaviour
             Debug.Log("nope");
             return;
         }
-        Debug.Log(hit.transform.gameObject.layer);
         Debug.DrawRay(transform.position + Vector3.up, Vector3.down);
         float start;
         float end;
@@ -93,10 +99,6 @@ public class PlayerGrower : MonoBehaviour
         }
         else if (hit.transform.gameObject.layer == Layers.sand)
         {
-            if (current < 0)
-            {
-                death.Invoke();
-            }
 
             start =  parts[current].GetScaleOffset();
             end = 0;
@@ -107,6 +109,8 @@ public class PlayerGrower : MonoBehaviour
             {
                 yield return new WaitUntil(() => animated);
                 parts[current--].gameObject.SetActive(false);
+
+                if (current < 0) death.Invoke();
             }
         }
 

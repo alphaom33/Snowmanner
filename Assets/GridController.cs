@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class GridController : MonoBehaviour
 {
+    public GameObject primitive;
+
     public Transform child;
 
     public Material mat1;
@@ -37,14 +39,14 @@ public class GridController : MonoBehaviour
         {
             for (int j = 0; j < child.localScale.z / tileScale; j++)
             {
-                GameObject tile = GameObject.CreatePrimitive(PrimitiveType.Plane);
+                GameObject tile = Instantiate(primitive);
                 tile.transform.localScale *= scaleFactor * tileScale;
 
                 tile.transform.parent = transform;
                 tile.transform.localPosition = new Vector3(i, 0, j) * tileScale;
 
 
-                tile.GetComponent<MeshRenderer>().material = i % 2 == 1 ^ j % 2 == 0 ? mat1 : mat2;
+                tile.GetComponentInChildren<MeshRenderer>().material = i % 2 == 1 ^ j % 2 == 0 ? mat1 : mat2;
 
                 tile.layer = layer;
             }
