@@ -11,9 +11,30 @@ public class GridController : MonoBehaviour
 
     public float scaleFactor;
 
+    public float tileScale;
+
     // Start is called before the first frame update
     void Start()
     {
+    }
+
+
+    void MakeGrid()
+    {
+        for (int i = 0; i < child.localScale.x / tileScale; i++)
+        {
+            for (int j = 0; j < child.localScale.z / tileScale; j++)
+            {
+                GameObject tile = GameObject.CreatePrimitive(PrimitiveType.Plane);
+                tile.transform.localScale *= scaleFactor * tileScale;
+
+                tile.transform.parent = transform;
+                tile.transform.localPosition = new Vector3(i, 0, j) * tileScale;
+
+
+                tile.GetComponent<MeshRenderer>().material = i % 2 == 1 ^ j % 2 == 0 ? mat1 : mat2;
+            }
+        }
     }
 
     // Update is called once per frame
@@ -24,18 +45,16 @@ public class GridController : MonoBehaviour
             if (t != child) Destroy(t.gameObject);
         }
 
-        for (int i = 0; i < child.localScale.x; i++)
+        MakeGrid();
+    }
+
+    private void OnDrawGizmos()
+    {
+        foreach (MeshRenderer t in GetComponentsInChildren<MeshRenderer>())
         {
-            for (int j = 0; j < child.localScale.z; j++)
-            {
-                GameObject tile = GameObject.CreatePrimitive(PrimitiveType.Plane);
-                tile.transform.localScale *= scaleFactor;
-                tile.transform.localPosition = new Vector3(i, 0, j);
-
-                tile.transform.parent = transform;
-
-                tile.GetComponent<MeshRenderer>().material = i % 2 == 1 ^ j % 2 == 0 ? mat1 : mat2;
-            }
+            if (t != child) DestroyImmediate(t.gameObject);
         }
+
+        MakeGrid();
     }
 }
