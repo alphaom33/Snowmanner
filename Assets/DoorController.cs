@@ -5,6 +5,7 @@ using UnityEngine;
 public class DoorController : MonoBehaviour
 {
     public List<ButtonController> buttons;
+    public bool last;
 
     private Collider myCollider;
 
@@ -25,4 +26,6 @@ public class DoorController : MonoBehaviour
 
         myCollider.enabled = ack;            
     }
+
+    IEnumerator 
 }
