@@ -24,8 +24,6 @@ public class DoorController : MonoBehaviour
             ack &= !button.pressed;
         }
 
-        myCollider.enabled = ack;            
+        myCollider.enabled = ack;
     }
-
-    IEnumerator 
 }
