@@ -20,6 +20,7 @@ public class ButtonController : MonoBehaviour
     {
         if (other.CompareTag("Box") && !pressed)
         {
+            pressed = true;
             StartCoroutine(Animate(-1));
         }
     }
@@ -28,6 +29,7 @@ public class ButtonController : MonoBehaviour
     {
         if (unpressable && other.CompareTag("Box"))
         {
+            pressed = false;
             StartCoroutine(Animate(1));
         }
     }
