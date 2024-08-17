@@ -32,7 +32,7 @@ public class PlayerGrower : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        GetComponent<PlayerMovement>().moved.AddListener(Grow);
+        PlayerMovement.moved.AddListener(Grow);
         for (int i = 0; i < parts.Count; i++)
         {
             if (current < i)
@@ -60,7 +60,7 @@ public class PlayerGrower : MonoBehaviour
         }
     }
 
-    void Grow()
+    void Grow(Vector3 _)
     {
         if (current < parts.Count - 1)
         {
@@ -77,10 +77,5 @@ public class PlayerGrower : MonoBehaviour
                 }
             }
         }
-    }
-
-    private void OnDrawGizmos()
-    {
-        //Update();
     }
 }

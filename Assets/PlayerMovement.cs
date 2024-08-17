@@ -5,10 +5,10 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    public float moveDist = 1.0f;
+    public static float gridSize = 4;
     public float moveSpeed = 2.0f;
 
-    public UnityEvent moved;
+    public static UnityEvent<Vector3> moved = new();
 
     // Start is called before the first frame update
     void Start()
@@ -27,7 +27,7 @@ public class PlayerMovement : MonoBehaviour
         Vector3 input = new(-Input.GetAxisRaw("Horizontal"), 0, -Input.GetAxisRaw("Vertical"));
         if (input.magnitude > 0 && !running)
         {
-            moved.Invoke();
+            moved.Invoke(input);
             StartCoroutine(Pos(input));
         }
     }
@@ -40,7 +40,7 @@ public class PlayerMovement : MonoBehaviour
         Vector3 start = transform.position;
         for (float i = 0; i < 1; i += moveSpeed * Time.deltaTime)
         {
-            transform.position = Utils.VecEaseOutInSine(start, start + (filteredInput * moveDist), i);
+            transform.position = Utils.VecEaseOutInSine(start, start + (filteredInput * gridSize), i);
             yield return new WaitForEndOfFrame();
         }
         running = false;

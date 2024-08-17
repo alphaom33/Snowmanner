@@ -11,7 +11,7 @@ public class GridController : MonoBehaviour
 
     public float scaleFactor;
 
-    public float tileScale;
+    public float tileScale = PlayerMovement.gridSize;
 
     [EditorCools.Button]
     private void GenGrid()
