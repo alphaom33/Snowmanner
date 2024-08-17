@@ -12,6 +12,9 @@ public class PlayerGrower : MonoBehaviour
 
     public float animSpeed;
 
+    public int count;
+    public int countAmount;
+
     public static UnityEvent death = new();
 
     [System.Serializable]
@@ -91,27 +94,39 @@ public class PlayerGrower : MonoBehaviour
         {
             if (current + 1 >= parts.Count) return;
 
-            parts[++current].gameObject.SetActive(true);
-            start = 0;            
-            end = parts[current].startScale;
+            count++;
+            if (count >= countAmount)
+            {
+                count = 0;
 
-            StartCoroutine(Animate());
+                parts[++current].gameObject.SetActive(true);
+                start = 0;            
+                end = parts[current].startScale;
+
+                StartCoroutine(Animate());
+            }
         }
         else if (hit.transform.gameObject.layer == Layers.sand)
         {
             if (current < 0) return;
 
-            start =  parts[current].GetScaleOffset();
-            end = 0;
-            StartCoroutine(Animate());
-            StartCoroutine(Wait());
-
-            IEnumerator Wait()
+            count--;
+            if (count <= -countAmount)
             {
-                yield return new WaitUntil(() => animated);
-                parts[current--].gameObject.SetActive(false);
+                count = 0;
 
-                if (current < 0) death.Invoke();
+                start = parts[current].GetScaleOffset();
+                end = 0;
+                StartCoroutine(Animate());
+                StartCoroutine(Wait());
+
+                IEnumerator Wait()
+                {
+                    yield return new WaitUntil(() => animated);
+                    parts[current--].gameObject.SetActive(false);
+
+                    if (current < 0) death.Invoke();
+                }
             }
         }
 
