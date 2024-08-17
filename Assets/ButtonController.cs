@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class ButtonController : MonoBehaviour
 {
+    public bool unpressable;
     public bool pressed = false;
     public Transform button;
 
@@ -17,7 +18,7 @@ public class ButtonController : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Box"))
+        if (other.CompareTag("Box") && !pressed)
         {
             StartCoroutine(Animate(-1));
         }
@@ -25,7 +26,7 @@ public class ButtonController : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
-        if (other.CompareTag("Box"))
+        if (unpressable && other.CompareTag("Box"))
         {
             StartCoroutine(Animate(1));
         }
