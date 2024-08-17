@@ -19,9 +19,9 @@ public class GridController : MonoBehaviour
     [EditorCools.Button]
     private void GenGrid()
     {
-        foreach (MeshRenderer t in GetComponentsInChildren<MeshRenderer>())
+        foreach (Transform t in GetComponentsInChildren<Transform>())
         {
-            if (t != child) DestroyImmediate(t.gameObject);
+            if (t != child & t != transform) DestroyImmediate(t.gameObject);
         }
 
         MakeGrid();
