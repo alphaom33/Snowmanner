@@ -99,6 +99,7 @@ public class PlayerGrower : MonoBehaviour
         }
         else if (hit.transform.gameObject.layer == Layers.sand)
         {
+            if (current < 0) return;
 
             start =  parts[current].GetScaleOffset();
             end = 0;

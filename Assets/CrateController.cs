@@ -5,17 +5,12 @@ using UnityEngine;
 public class CrateController : MonoBehaviour
 {
     Vector3 lastDir;
+    public static bool back;
 
     // Start is called before the first frame update
     void Start()
     {
         PlayerMovement.moved.AddListener(CheckSelf);
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 
     void CheckSelf(Vector3 dir)
@@ -27,10 +22,10 @@ public class CrateController : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
+            Vector3 filteredInput = Vector3Int.RoundToInt(lastDir);
             StartCoroutine(Move());
             IEnumerator Move()
             {
-                Vector3 filteredInput = Vector3Int.RoundToInt(lastDir);
                 Vector3 start = transform.position;
                 for (float i = 0; i < 1; i += 2 * Time.deltaTime)
                 {
@@ -39,5 +34,10 @@ public class CrateController : MonoBehaviour
                 }
             }
         }
+    }
+
+    private void OnDrawGizmos()
+    {
+        Gizmos.DrawWireCube(transform.position + (lastDir * PlayerMovement.gridSize), Vector3.one * PlayerMovement.gridSize);
     }
 }

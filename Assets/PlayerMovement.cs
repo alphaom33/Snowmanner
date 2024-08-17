@@ -10,10 +10,12 @@ public class PlayerMovement : MonoBehaviour
 
     public static UnityEvent<Vector3> moved = new();
 
+    WallCheck wallCheck;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        wallCheck = GetComponent<WallCheck>();
     }
 
     // Update is called once per frame
@@ -25,7 +27,7 @@ public class PlayerMovement : MonoBehaviour
     void GetInput()
     {
         Vector3 input = new(-Input.GetAxisRaw("Horizontal"), 0, -Input.GetAxisRaw("Vertical"));
-        if (input.magnitude > 0 && !running && !LookAhead(input))
+        if (input.magnitude > 0 && !running && !wallCheck.CheckWall(input))
         {
             moved.Invoke(input);
             StartCoroutine(Pos(input));
@@ -38,17 +40,17 @@ public class PlayerMovement : MonoBehaviour
         running = true;
         Vector3 filteredInput = Vector3Int.RoundToInt(input);
         Vector3 start = transform.position;
+        Vector3 end = start + (filteredInput * gridSize);
         for (float i = 0; i < 1; i += moveSpeed * Time.deltaTime)
         {
-            transform.position = Utils.VecEaseOutInSine(start, start + (filteredInput * gridSize), i);
+            if (CrateController.back)
+            {
+                (start, end) = (end, start);
+                CrateController.back = false;
+            }
+            transform.position = Utils.VecEaseOutInSine(start, end, i);
             yield return new WaitForEndOfFrame();
         }
         running = false;
-    }
-
-    bool LookAhead(Vector3 input)
-    {
-        Vector3 filtered = Vector3Int.RoundToInt(input);
-        return Physics.CheckBox(transform.position + (filtered * gridSize), Vector3.one * gridSize / 2, transform.rotation, Layers.wallMask);
     }
 }
