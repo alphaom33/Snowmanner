@@ -13,6 +13,17 @@ public class GridController : MonoBehaviour
 
     public float tileScale;
 
+    [EditorCools.Button]
+    private void GenGrid()
+    {
+        foreach (MeshRenderer t in GetComponentsInChildren<MeshRenderer>())
+        {
+            if (t != child) DestroyImmediate(t.gameObject);
+        }
+
+        MakeGrid();
+    }
+
     // Start is called before the first frame update
     void Start()
     {
@@ -43,16 +54,6 @@ public class GridController : MonoBehaviour
         foreach (MeshRenderer t in GetComponentsInChildren<MeshRenderer>())
         {
             if (t != child) Destroy(t.gameObject);
-        }
-
-        MakeGrid();
-    }
-
-    private void OnDrawGizmos()
-    {
-        foreach (MeshRenderer t in GetComponentsInChildren<MeshRenderer>())
-        {
-            if (t != child) DestroyImmediate(t.gameObject);
         }
 
         MakeGrid();

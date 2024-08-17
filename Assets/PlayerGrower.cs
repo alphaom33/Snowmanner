@@ -81,6 +81,6 @@ public class PlayerGrower : MonoBehaviour
 
     private void OnDrawGizmos()
     {
-        Update();
+        //Update();
     }
 }
