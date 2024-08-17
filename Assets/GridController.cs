@@ -47,15 +47,4 @@ public class GridController : MonoBehaviour
             }
         }
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-        foreach (MeshRenderer t in GetComponentsInChildren<MeshRenderer>())
-        {
-            if (t != child) Destroy(t.gameObject);
-        }
-
-        MakeGrid();
-    }
 }

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using System.Transactions;
 using UnityEngine;
 using UnityEngine.Serialization;
 
@@ -15,6 +16,8 @@ public class PlayerGrower : MonoBehaviour
     {
         public GameObject gameObject;
         [SerializeField] float scaleFactor;
+
+        public float startScale;
 
         public float GetScaleOffset()
         {
@@ -35,6 +38,7 @@ public class PlayerGrower : MonoBehaviour
         PlayerMovement.moved.AddListener(Grow);
         for (int i = 0; i < parts.Count; i++)
         {
+            parts[i].startScale = parts[i].GetScaleOffset();
             if (current < i)
             {
                 parts[i].gameObject.SetActive(false);
@@ -62,20 +66,52 @@ public class PlayerGrower : MonoBehaviour
 
     void Grow(Vector3 _)
     {
-        if (current < parts.Count - 1)
+        bool animated = false;
+
+        RaycastHit hit;
+        if (!Physics.Raycast(new Ray(transform.position + (Vector3.up), Vector3.down), out hit, 100, Layers.sandMask | Layers.snowMask))
         {
+            Debug.Log("nope");
+            return;
+        }
+        Debug.Log(hit.transform.gameObject.layer);
+        Debug.DrawRay(transform.position + Vector3.up, Vector3.down);
+        float start;
+        float end;
+        if (hit.transform.transform.gameObject.layer == Layers.snow)
+        {
+            if (current + 1 >= parts.Count) return;
+
             parts[++current].gameObject.SetActive(true);
+            start = 0;            
+            end = parts[current].startScale;
 
             StartCoroutine(Animate());
-            IEnumerator Animate()
+        }
+        else
+        {
+            if (current < 0) return;
+
+            start =  parts[current].GetScaleOffset();
+            end = 0;
+            StartCoroutine(Animate());
+            StartCoroutine(Wait());
+
+            IEnumerator Wait()
             {
-                float initialScale = parts[current].GetScaleOffset();
-                for (float i = 0; i < 1; i += animSpeed * Time.deltaTime)
-                {
-                    parts[current].SetScale(Mathf.Lerp(0, initialScale, i));
-                    yield return new WaitForEndOfFrame();
-                }
+                yield return new WaitUntil(() => animated);
+                parts[current--].gameObject.SetActive(false);
             }
+        }
+
+        IEnumerator Animate()
+        {
+            for (float i = 0; i < 1; i += animSpeed * Time.deltaTime)
+            {
+                parts[current].SetScale(Mathf.Lerp(start, end, i));
+                yield return new WaitForEndOfFrame();
+            }
+            animated = true;
         }
     }
 }
