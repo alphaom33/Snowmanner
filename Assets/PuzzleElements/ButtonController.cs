@@ -23,6 +23,11 @@ public class ButtonController : MonoBehaviour
             pressed = true;
             StartCoroutine(Animate(-1));
         }
+       else if (!unpressable && other.CompareTag("Player"))
+        {
+            pressed = true;
+            StartCoroutine(Animate(-1));
+        }
     }
 
     private void OnTriggerExit(Collider other)
