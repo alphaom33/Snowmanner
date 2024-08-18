@@ -10,6 +10,7 @@ public class DoorController : MonoBehaviour
     private Collider myCollider;
 
     public float speed;
+    public int dir;
     public Transform model;
 
     // Start is called before the first frame update
@@ -39,20 +40,20 @@ public class DoorController : MonoBehaviour
     {
         float start;
         float end;
-        if (!last)
+        if (last)
         {
             start = 0;
-            end = 90;
+            end = 90 * dir;
         }
         else
         {
-            start = 90;
+            start = 90 * dir;
             end = 0;
         }
 
         for (float i = 0; i < 1; i += Time.deltaTime * speed)
         {
-            model.rotation = Quaternion.Euler(model.eulerAngles.x, Utils.EaseOutInSine(start, end, i), model.eulerAngles.z);
+            model.localRotation = Quaternion.Euler(model.localEulerAngles.x, Utils.EaseOutInSine(start, end, i), model.localEulerAngles.z);
             yield return new WaitForEndOfFrame();
         }
     }
