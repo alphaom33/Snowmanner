@@ -9,6 +9,7 @@ public class PlayerMovement : MonoBehaviour
 {
     public static float gridSize = 4;
     public float moveSpeed = 2.0f;
+    bool running = false;
 
     public static UnityEvent<Vector3> moved = new();
 
@@ -28,7 +29,8 @@ public class PlayerMovement : MonoBehaviour
 
     void GetInput()
     {
-        Vector3 input = new(-Input.GetAxisRaw("Horizontal"), 0, -Input.GetAxisRaw("Vertical"));
+        Vector3 input = new(Input.GetAxisRaw("Horizontal"), 0, Input.GetAxisRaw("Vertical"));
+        input = CamerRelativate(input);
         if (input.magnitude > 0 && !running && !wallCheck.CheckWall(input))
         {
             moved.Invoke(input);
@@ -36,7 +38,21 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
-    bool running = false;
+    Vector3 CamerRelativate(Vector3 input)
+    {
+        Vector3 forward = Camera.main.transform.forward;
+        forward.y = 0;
+
+        float angle = Mathf.Atan2(forward.x, forward.z);
+
+        angle = angle / Mathf.PI * 2;
+        angle = Mathf.Round(angle);
+        angle = angle / 2 * 180;
+        Debug.Log(angle);
+
+        return Quaternion.Euler(0, angle, 0) * input;
+    }
+
     IEnumerator Pos(Vector3 input)
     {
         running = true;
