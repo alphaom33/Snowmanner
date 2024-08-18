@@ -18,7 +18,7 @@ public class ButtonController : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Box") && !pressed)
+        if (other.CompareTag("Box") && !pressed && (!unpressable && other.CompareTag("Player")))
         {
             pressed = true;
             StartCoroutine(Animate(-1));
