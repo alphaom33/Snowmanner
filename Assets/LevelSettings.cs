@@ -9,6 +9,8 @@ public class LevelSettings : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        GameObject.FindWithTag("Player").GetComponent<PlayerGrower>().current = playerStartNum;
+        PlayerGrower tmp = GameObject.FindWithTag("Player").GetComponent<PlayerGrower>(); 
+        tmp.current = playerStartNum;
+        tmp.UpdateNumbers();
     }
 }

@@ -49,13 +49,15 @@ public class PlayerGrower : MonoBehaviour
     void Start()
     {
         PlayerMovement.moved.AddListener(Grow);
+        UpdateNumbers();
+    }
+
+    public void UpdateNumbers()
+    {
         for (int i = 0; i < parts.Count; i++)
         {
             parts[i].startScale = parts[i].GetScaleOffset();
-            if (current < i)
-            {
-                parts[i].gameObject.SetActive(false);
-            }
+            parts[i].gameObject.SetActive(current >= i);
         }
     }
 
