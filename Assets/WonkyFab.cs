@@ -21,6 +21,7 @@ public class WonkyFab : MonoBehaviour
 
         for (int i = 0; i < current; i++) {
             GameObject a = Instantiate(parts[i], transform);
+            a.GetComponentsInChildren<Collider>().ToList().ForEach(x => x.enabled = true);
             if (i == parts.Length - 1)
             {
                 a.AddComponent<PlayeMaker>();

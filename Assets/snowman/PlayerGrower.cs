@@ -49,6 +49,7 @@ public class PlayerGrower : MonoBehaviour
     void Start()
     {
         PlayerMovement.moved.AddListener(Grow);
+        PlayerMovement.stoppedMoved.AddListener(Aaaaahhhh);
         UpdateNumbers();
     }
 
@@ -79,6 +80,17 @@ public class PlayerGrower : MonoBehaviour
         }
     }
 
+    void Aaaaahhhh()
+    {
+        RaycastHit hit;
+        if (!Physics.Raycast(new Ray(transform.position + (Vector3.up), Vector3.down), out hit, 100, Layers.floorMask)) return;
+
+        if (!GetComponent<PlayerMovement>().running && hit.transform.GetComponent<PlayeMaker>())
+        {
+            hit.transform.GetComponent<PlayeMaker>().Go(this);
+        }
+    }
+
     void Grow(Vector3 _)
     {
         bool animated = false;
@@ -88,6 +100,7 @@ public class PlayerGrower : MonoBehaviour
         {
             return;
         }
+
         Debug.DrawRay(transform.position + Vector3.up, Vector3.down);
         float start;
         float end;

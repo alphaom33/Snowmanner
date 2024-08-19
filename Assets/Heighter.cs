@@ -5,7 +5,7 @@ using UnityEngine;
 public class Heighter : MonoBehaviour
 {
     public float speed;
-    public const float epsilon = 0.001f;
+    public const float epsilon = 0.01f;
 
     public bool running;
 
@@ -33,6 +33,10 @@ public class Heighter : MonoBehaviour
         {
             transform.position =  new Vector3(transform.position.x, Utils.EaseInQuad(start, hit.point.y, i), transform.position.z);
             yield return new WaitForEndOfFrame();
+        }
+        if (hit.transform.GetComponentInChildren<PlayeMaker>() != null)
+        {
+            hit.transform.GetComponentInChildren<PlayeMaker>().Go(GetComponent<PlayerGrower>());
         }
         running = false;
     }

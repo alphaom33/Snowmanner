@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -5,15 +6,22 @@ using UnityEngine;
 public class PlayeMaker : MonoBehaviour
 {
     public int num;
-
-    private void OnTriggerEnter(Collider other)
+    public GameObject parent;
+    
+    private void Start()
     {
-        if (other.CompareTag("Player") && !other.GetComponent<PlayerMovement>().running)
+        parent = GetComponentsInParent<Transform>()[1].gameObject;
+        try
         {
-            PlayerGrower tmp = other.GetComponent<PlayerGrower>();
-            tmp.current = 2;
-            tmp.UpdateNumbers();
-            Destroy(gameObject);
+            parent = parent.GetComponentsInParent<Transform>()[1].gameObject;
         }
+        catch (IndexOutOfRangeException) { }
+    }
+
+    public void Go(PlayerGrower playerGrower) {
+        playerGrower.current = 2;
+        playerGrower.UpdateNumbers();
+        playerGrower.transform.position = parent.transform.position;
+        Destroy(parent);
     }
 }

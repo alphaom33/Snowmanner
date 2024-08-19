@@ -12,6 +12,7 @@ public class PlayerMovement : MonoBehaviour
     public bool running = false;
 
     public static UnityEvent<Vector3> moved = new();
+    public static UnityEvent stoppedMoved = new();
 
     WallCheck wallCheck;
     Heighter heighter;
@@ -80,5 +81,7 @@ public class PlayerMovement : MonoBehaviour
 
         running = false;
         heighter.enabled = true;
+
+        stoppedMoved.Invoke();
     }
 }

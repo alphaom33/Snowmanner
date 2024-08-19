@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class HitterController : WallController
 {
+
     public int current;
     PlayerGrower player;
     public GameObject wonkyFab;
