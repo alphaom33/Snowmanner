@@ -5,7 +5,7 @@ using UnityEngine;
 public class DoorController : MonoBehaviour
 {
     public List<ButtonController> buttons;
-    public bool last;
+    public bool last = false;
 
     private Collider myCollider;
 
@@ -25,7 +25,7 @@ public class DoorController : MonoBehaviour
         bool ack = true;
         foreach (var button in buttons)
         {
-            ack &= !button.pressed;
+            ack &= button.pressed;
         }
 
         if (last != ack)
@@ -40,7 +40,7 @@ public class DoorController : MonoBehaviour
     {
         float start;
         float end;
-        if (last)
+        if (!last)
         {
             start = 0;
             end = 90 * dir;
