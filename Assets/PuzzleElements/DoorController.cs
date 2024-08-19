@@ -32,7 +32,7 @@ public class DoorController : MonoBehaviour
         {
             StartCoroutine(DoorSwing());
         }
-        myCollider.enabled = ack;
+        myCollider.enabled = !ack;
         last = ack;
     }
 
