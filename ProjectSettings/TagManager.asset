@@ -6,16 +6,19 @@ TagManager:
   tags:
   - Box
   - LevelSelector
+  - Snow
+  - Sand
+  - Plank
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - Snow
+  - Floor
   - Water
   - UI
-  - Sand
+  - 
   - Wall
-  - Plank
+  - 
   - Crate
   - 
   - 

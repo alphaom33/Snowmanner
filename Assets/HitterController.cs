@@ -7,7 +7,6 @@ public class HitterController : WallController
     public int current;
     PlayerGrower player;
     public GameObject wonkyFab;
-    public float height;
 
     public float[] heights = { 2, 3.115f };
     public float[] floorHeights = { 1.7f, 2.88f };

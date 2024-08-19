@@ -8,6 +8,8 @@ public class WonkyFab : MonoBehaviour
 {
     GameObject player;
 
+    public GameObject[] parts;
+
     // Start is called before the first frame update
     public void DoTheThing(int current)
     {
@@ -17,13 +19,12 @@ public class WonkyFab : MonoBehaviour
         PlayerGrower grower = player.GetComponent<PlayerGrower>();
         int size = grower.current - current;
 
-        Transform[] tmp = player.GetComponentsInChildren<Transform>().Where((t, i) => i <= 2 - size && i < 4 && i != 0).ToArray();
-        for (int i = 0; i < tmp.Length; i++) {
-            Transform a = Instantiate(tmp[i], transform);
-            if (i == tmp.Length - 1)
+        for (int i = 0; i < current; i++) {
+            GameObject a = Instantiate(parts[i], transform);
+            if (i == parts.Length - 1)
             {
                 a.AddComponent<PlayeMaker>();
-                a.gameObject.layer = Layers.floor;
+                a.layer = Layers.floor;
             }
         }
 

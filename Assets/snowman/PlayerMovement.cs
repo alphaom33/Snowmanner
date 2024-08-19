@@ -33,7 +33,7 @@ public class PlayerMovement : MonoBehaviour
     {
         Vector3 input = new(Input.GetAxisRaw("Horizontal"), 0, Input.GetAxisRaw("Vertical"));
         input = CamerRelativate(input);
-        if (input.magnitude > 0 && !running)
+        if (input.magnitude > 0 && !running && !GetComponent<Heighter>().running)
         {
             if (!wallCheck.CheckWall(input))
             {

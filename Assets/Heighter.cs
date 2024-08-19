@@ -7,7 +7,7 @@ public class Heighter : MonoBehaviour
     public float speed;
     public const float epsilon = 0.001f;
 
-    bool running;
+    public bool running;
 
     // Update is called once per frame
     void Update()
