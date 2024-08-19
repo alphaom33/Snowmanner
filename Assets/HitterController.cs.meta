@@ -1,0 +1,13 @@
+fileFormatVersion: 2
+guid: a15026616864e4c4e99ba688ef8a22d4
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - wonkyFab: {fileID: 4315812004236027275, guid: 3b5bb5ee57a86884d8355fb087853af7,
+      type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

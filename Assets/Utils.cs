@@ -13,4 +13,10 @@ public class Utils
     {
         return AnimationCurve.EaseInOut(0, a, 1, b).Evaluate(t);
     }
+
+    public static float EaseInQuad(float start, float end, float value)
+    {
+        end -= start;
+        return end * value * value * value + start;
+    }
 }
