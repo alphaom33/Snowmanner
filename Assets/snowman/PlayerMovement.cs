@@ -9,16 +9,19 @@ public class PlayerMovement : MonoBehaviour
 {
     public static float gridSize = 4;
     public float moveSpeed = 2.0f;
-    bool running = false;
+    public bool running = false;
 
     public static UnityEvent<Vector3> moved = new();
+    public static UnityEvent stoppedMoved = new();
 
     WallCheck wallCheck;
+    Heighter heighter;
 
     // Start is called before the first frame update
     void Start()
     {
         wallCheck = GetComponent<WallCheck>();
+        heighter  = GetComponent<Heighter>();
     }
 
     // Update is called once per frame
@@ -31,10 +34,14 @@ public class PlayerMovement : MonoBehaviour
     {
         Vector3 input = new(Input.GetAxisRaw("Horizontal"), 0, Input.GetAxisRaw("Vertical"));
         input = CamerRelativate(input);
-        if (input.magnitude > 0 && !running && !wallCheck.CheckWall(input))
+        if (input.magnitude > 0 && !running && !GetComponent<Heighter>().running)
         {
-            moved.Invoke(input);
-            StartCoroutine(Pos(input));
+            if (!wallCheck.CheckWall(input))
+            {
+                running = true;
+                moved.Invoke(input);
+                StartCoroutine(Pos(input));
+            }
         }
     }
 
@@ -48,14 +55,16 @@ public class PlayerMovement : MonoBehaviour
         angle = angle / Mathf.PI * 2;
         angle = Mathf.Round(angle);
         angle = angle / 2 * 180;
-        Debug.Log(angle);
 
         return Quaternion.Euler(0, angle, 0) * input;
     }
 
     IEnumerator Pos(Vector3 input)
     {
+
         running = true;
+        heighter.enabled = false;
+
         Vector3 filteredInput = Vector3Int.RoundToInt(input);
         Vector3 start = transform.position;
         Vector3 end = start + (filteredInput * gridSize);
@@ -69,6 +78,10 @@ public class PlayerMovement : MonoBehaviour
             transform.position = Utils.VecEaseOutInSine(start, end, i);
             yield return new WaitForEndOfFrame();
         }
+
         running = false;
+        heighter.enabled = true;
+
+        stoppedMoved.Invoke();
     }
 }

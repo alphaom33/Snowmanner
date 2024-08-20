@@ -6,16 +6,20 @@ TagManager:
   tags:
   - Box
   - LevelSelector
+  - Snow
+  - Sand
+  - Plank
+  - PlayeMaker
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - Snow
+  - Floor
   - Water
   - UI
-  - Sand
+  - 
   - Wall
-  - Plank
+  - 
   - Crate
   - 
   - 

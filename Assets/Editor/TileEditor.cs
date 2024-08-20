@@ -29,7 +29,7 @@ public class TileEditor : Editor
 
             newby.GetComponentInChildren<MeshRenderer>().material = Mathf.Abs(mousePosition.x) / PlayerMovement.gridSize % 2 == 1 ^ Mathf.Abs(mousePosition.z) / PlayerMovement.gridSize % 2 == 0 ? tileMaker.material1 : tileMaker.material2;
 
-            newby.layer = tileMaker.layer;
+            newby.tag = tileMaker.tagger;
 
             Undo.RegisterCreatedObjectUndo(newby, "weee");
         }

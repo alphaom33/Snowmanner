@@ -49,6 +49,7 @@ public class PlayerGrower : MonoBehaviour
     void Start()
     {
         PlayerMovement.moved.AddListener(Grow);
+        PlayerMovement.stoppedMoved.AddListener(Aaaaahhhh);
         UpdateNumbers();
     }
 
@@ -79,20 +80,31 @@ public class PlayerGrower : MonoBehaviour
         }
     }
 
+    void Aaaaahhhh()
+    {
+        RaycastHit hit;
+        if (!Physics.Raycast(new Ray(transform.position + (Vector3.up), Vector3.down), out hit, 100, Layers.floorMask)) return;
+
+        if (!GetComponent<PlayerMovement>().running && hit.transform.GetComponent<PlayeMaker>())
+        {
+            hit.transform.GetComponent<PlayeMaker>().Go(this);
+        }
+    }
+
     void Grow(Vector3 _)
     {
         bool animated = false;
 
         RaycastHit hit;
-        if (!Physics.Raycast(new Ray(transform.position + (Vector3.up), Vector3.down), out hit, 100, Layers.sandMask | Layers.snowMask | Layers.plankMask))
+        if (!Physics.Raycast(new Ray(transform.position + (Vector3.up), Vector3.down), out hit, 100, Layers.floorMask))
         {
-            Debug.Log("nope");
             return;
         }
+
         Debug.DrawRay(transform.position + Vector3.up, Vector3.down);
         float start;
         float end;
-        if (hit.transform.transform.gameObject.layer == Layers.snow)
+        if (hit.transform.CompareTag("Snow"))
         {
             if (current + 1 >= parts.Count) return;
 
@@ -108,7 +120,7 @@ public class PlayerGrower : MonoBehaviour
                 StartCoroutine(Animate());
             }
         }
-        else if (hit.transform.gameObject.layer == Layers.sand)
+        else if (hit.transform.CompareTag("Sand"))
         {
             if (current < 0) return;
 
