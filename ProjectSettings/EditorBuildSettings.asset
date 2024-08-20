@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Levels/menu.unity
+    guid: 08291a6693e728946b680b5e945b3f71
+  - enabled: 1
     path: Assets/OutdoorsScene.unity
     guid: 8124e5870f4fd4c779e7a5f994e84ad1
   - enabled: 1
@@ -20,4 +23,22 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Levels/SnowOneOfThem.unity
     guid: c48efd2ef8aa3734e84efc7441594deb
+  - enabled: 1
+    path: Assets/Levels/sand lv1.unity
+    guid: d7949958151191143a9c1b1be1e3c02f
+  - enabled: 1
+    path: Assets/Levels/sand lv2.unity
+    guid: d94d6f3f0bd8bf942be2f51ab0e99670
+  - enabled: 1
+    path: Assets/Levels/sand lv3.unity
+    guid: c537ca41d7f636e4086739208c33f293
+  - enabled: 1
+    path: Assets/Levels/sand lv4.unity
+    guid: 2a44378ec9f6d684a83ed01f198d0e6c
+  - enabled: 1
+    path: Assets/Levels/sand lv5.unity
+    guid: 18045fbf056ad824bbc847098bec7b6a
+  - enabled: 1
+    path: Assets/Levels/sand lv6(has snow too).unity
+    guid: cbbbecf23ce59f04a87de461d8dd6ff8
   m_configObjects: {}
