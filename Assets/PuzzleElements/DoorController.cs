@@ -2,12 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DoorController : MonoBehaviour
+public class DoorController : WallController
 {
     public List<ButtonController> buttons;
     public bool last = false;
-
-    private Collider myCollider;
 
     public float speed;
     public int dir;
@@ -16,7 +14,6 @@ public class DoorController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        myCollider = GetComponent<Collider>();
     }
 
     // Update is called once per frame
@@ -32,7 +29,6 @@ public class DoorController : MonoBehaviour
         {
             StartCoroutine(DoorSwing());
         }
-        myCollider.enabled = !ack;
         last = ack;
     }
 
@@ -56,5 +52,10 @@ public class DoorController : MonoBehaviour
             model.localRotation = Quaternion.Euler(model.localEulerAngles.x, Utils.EaseOutInSine(start, end, i), model.localEulerAngles.z);
             yield return new WaitForEndOfFrame();
         }
+    }
+
+    public override bool GetWall()
+    {
+        return !last;
     }
 }
