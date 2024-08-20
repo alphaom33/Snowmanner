@@ -19,7 +19,9 @@ public class PlayeMaker : MonoBehaviour
     }
 
     public void Go(PlayerGrower playerGrower) {
-        playerGrower.current = 2;
+        if (playerGrower.current != num - 1) return;
+
+        playerGrower.current = num;
         playerGrower.UpdateNumbers();
         playerGrower.transform.position = parent.transform.position;
         Destroy(parent);

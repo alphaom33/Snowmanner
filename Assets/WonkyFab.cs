@@ -19,7 +19,7 @@ public class WonkyFab : MonoBehaviour
         PlayerGrower grower = player.GetComponent<PlayerGrower>();
         int size = grower.current - current;
 
-        for (int i = 0; i < current; i++) {
+        for (int i = 1 - (grower.current - 1); i < current; i++) {
             GameObject a = Instantiate(parts[i], transform);
             a.GetComponentsInChildren<Collider>().ToList().ForEach(x => x.enabled = true);
             if (i == parts.Length - 1)
