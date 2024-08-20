@@ -1388,80 +1388,6 @@ MonoBehaviour:
       enableFptlForForwardOpaque: 0
       enableBigTilePrepass: 0
       isFptlEnabled: 0
---- !u!1001 &470522435
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 1420580678933331537, guid: 880287bb9e5c7094790e1742d02aa4e7,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1420580678933331537, guid: 880287bb9e5c7094790e1742d02aa4e7,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1420580678933331537, guid: 880287bb9e5c7094790e1742d02aa4e7,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1420580678933331537, guid: 880287bb9e5c7094790e1742d02aa4e7,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1420580678933331537, guid: 880287bb9e5c7094790e1742d02aa4e7,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1420580678933331537, guid: 880287bb9e5c7094790e1742d02aa4e7,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1420580678933331537, guid: 880287bb9e5c7094790e1742d02aa4e7,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1420580678933331537, guid: 880287bb9e5c7094790e1742d02aa4e7,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1420580678933331537, guid: 880287bb9e5c7094790e1742d02aa4e7,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1420580678933331537, guid: 880287bb9e5c7094790e1742d02aa4e7,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2693306775863880156, guid: 880287bb9e5c7094790e1742d02aa4e7,
-        type: 3}
-      propertyPath: m_Name
-      value: snow man stuff applied
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 880287bb9e5c7094790e1742d02aa4e7, type: 3}
---- !u!4 &470522436 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 2738367779303830406, guid: 880287bb9e5c7094790e1742d02aa4e7,
-    type: 3}
-  m_PrefabInstance: {fileID: 470522435}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &522722702 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1715045807458201987, guid: 8fae9bfe47dc81a40bfbf8035e951e93,
@@ -2884,7 +2810,7 @@ MonoBehaviour:
   m_StreamingVersion: 20170927
   m_Priority: 10
   m_StandbyUpdate: 2
-  m_LookAt: {fileID: 470522436}
+  m_LookAt: {fileID: 0}
   m_Follow: {fileID: 0}
   m_Lens:
     FieldOfView: 60.000004
@@ -3126,6 +3052,74 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 707950202}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1376943840
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1420580678933331537, guid: 0f2130de18320d548bb224815b1e3853,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.30164194
+      objectReference: {fileID: 0}
+    - target: {fileID: 1420580678933331537, guid: 0f2130de18320d548bb224815b1e3853,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.0000019669533
+      objectReference: {fileID: 0}
+    - target: {fileID: 1420580678933331537, guid: 0f2130de18320d548bb224815b1e3853,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.920681
+      objectReference: {fileID: 0}
+    - target: {fileID: 1420580678933331537, guid: 0f2130de18320d548bb224815b1e3853,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1420580678933331537, guid: 0f2130de18320d548bb224815b1e3853,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1420580678933331537, guid: 0f2130de18320d548bb224815b1e3853,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1420580678933331537, guid: 0f2130de18320d548bb224815b1e3853,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1420580678933331537, guid: 0f2130de18320d548bb224815b1e3853,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1420580678933331537, guid: 0f2130de18320d548bb224815b1e3853,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1420580678933331537, guid: 0f2130de18320d548bb224815b1e3853,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2693306775863880156, guid: 0f2130de18320d548bb224815b1e3853,
+        type: 3}
+      propertyPath: m_Name
+      value: snow man stuff applied
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 0f2130de18320d548bb224815b1e3853, type: 3}
 --- !u!1001 &1379759225
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4574,7 +4568,6 @@ SceneRoots:
   - {fileID: 468416444}
   - {fileID: 2096607670}
   - {fileID: 154099785}
-  - {fileID: 470522435}
   - {fileID: 434154178}
   - {fileID: 1287764560}
   - {fileID: 760744820}
@@ -4586,3 +4579,4 @@ SceneRoots:
   - {fileID: 675709867}
   - {fileID: 872714242}
   - {fileID: 1609696768}
+  - {fileID: 1376943840}

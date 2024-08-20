@@ -2830,6 +2830,74 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1746682225}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1622193662
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1420580678933331537, guid: 0f2130de18320d548bb224815b1e3853,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.09195924
+      objectReference: {fileID: 0}
+    - target: {fileID: 1420580678933331537, guid: 0f2130de18320d548bb224815b1e3853,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.000000059604645
+      objectReference: {fileID: 0}
+    - target: {fileID: 1420580678933331537, guid: 0f2130de18320d548bb224815b1e3853,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.027785778
+      objectReference: {fileID: 0}
+    - target: {fileID: 1420580678933331537, guid: 0f2130de18320d548bb224815b1e3853,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1420580678933331537, guid: 0f2130de18320d548bb224815b1e3853,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1420580678933331537, guid: 0f2130de18320d548bb224815b1e3853,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1420580678933331537, guid: 0f2130de18320d548bb224815b1e3853,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1420580678933331537, guid: 0f2130de18320d548bb224815b1e3853,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1420580678933331537, guid: 0f2130de18320d548bb224815b1e3853,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1420580678933331537, guid: 0f2130de18320d548bb224815b1e3853,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2693306775863880156, guid: 0f2130de18320d548bb224815b1e3853,
+        type: 3}
+      propertyPath: m_Name
+      value: snow man stuff applied
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 0f2130de18320d548bb224815b1e3853, type: 3}
 --- !u!1001 &1746682225
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3131,7 +3199,7 @@ PrefabInstance:
     - target: {fileID: 5058272727244339591, guid: 331699e6e0501a14ea58ca0dc8b50ac2,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -10.567788
+      value: -11.55
       objectReference: {fileID: 0}
     - target: {fileID: 5058272727244339591, guid: 331699e6e0501a14ea58ca0dc8b50ac2,
         type: 3}
@@ -3329,74 +3397,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1920919780}
   m_PrefabAsset: {fileID: 0}
---- !u!1001 &1937537166
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 1420580678933331537, guid: 0f2130de18320d548bb224815b1e3853,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -0.4843192
-      objectReference: {fileID: 0}
-    - target: {fileID: 1420580678933331537, guid: 0f2130de18320d548bb224815b1e3853,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -0.000000059604645
-      objectReference: {fileID: 0}
-    - target: {fileID: 1420580678933331537, guid: 0f2130de18320d548bb224815b1e3853,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -0.25029945
-      objectReference: {fileID: 0}
-    - target: {fileID: 1420580678933331537, guid: 0f2130de18320d548bb224815b1e3853,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1420580678933331537, guid: 0f2130de18320d548bb224815b1e3853,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1420580678933331537, guid: 0f2130de18320d548bb224815b1e3853,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1420580678933331537, guid: 0f2130de18320d548bb224815b1e3853,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1420580678933331537, guid: 0f2130de18320d548bb224815b1e3853,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1420580678933331537, guid: 0f2130de18320d548bb224815b1e3853,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1420580678933331537, guid: 0f2130de18320d548bb224815b1e3853,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2693306775863880156, guid: 0f2130de18320d548bb224815b1e3853,
-        type: 3}
-      propertyPath: m_Name
-      value: snow man stuff applied
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 0f2130de18320d548bb224815b1e3853, type: 3}
 --- !u!114 &1976192325 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1870164389222364301, guid: 9e24c929ea11f594e872cabfb53050cb,
@@ -3840,4 +3840,4 @@ SceneRoots:
   - {fileID: 505161534}
   - {fileID: 1897853922}
   - {fileID: 1856254979}
-  - {fileID: 1937537166}
+  - {fileID: 1622193662}
