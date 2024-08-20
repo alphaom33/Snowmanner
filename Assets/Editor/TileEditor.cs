@@ -24,12 +24,14 @@ public class TileEditor : Editor
             PrefabUtility.ConvertToPrefabInstance(newby, tileMaker.prefab, new ConvertToPrefabInstanceSettings(), InteractionMode.AutomatedAction);
 
             newby.transform.position = mousePosition;
+            newby.transform.Translate(0, tileMaker.height, 0);
             newby.transform.parent = tileMaker.father.transform;
             newby.transform.localScale *= PlayerMovement.gridSize;
 
             newby.GetComponentInChildren<MeshRenderer>().material = Mathf.Abs(mousePosition.x) / PlayerMovement.gridSize % 2 == 1 ^ Mathf.Abs(mousePosition.z) / PlayerMovement.gridSize % 2 == 0 ? tileMaker.material1 : tileMaker.material2;
 
             newby.tag = tileMaker.tagger;
+            newby.layer = 3;
 
             Undo.RegisterCreatedObjectUndo(newby, "weee");
         }

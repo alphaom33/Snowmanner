@@ -27,16 +27,13 @@ public class Heighter : MonoBehaviour
 
     IEnumerator Fall(RaycastHit hit)
     {
+        Debug.Log("fall");
         running = true;
         float start = transform.position.y;
         for (float i = 0; i < 1; i += Time.deltaTime * speed)
         {
             transform.position =  new Vector3(transform.position.x, Utils.EaseInQuad(start, hit.point.y, i), transform.position.z);
             yield return new WaitForEndOfFrame();
-        }
-        if (hit.transform.GetComponentInChildren<PlayeMaker>() != null)
-        {
-            hit.transform.GetComponentInChildren<PlayeMaker>().Go(GetComponent<PlayerGrower>());
         }
         running = false;
     }

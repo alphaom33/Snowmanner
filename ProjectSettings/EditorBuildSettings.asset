@@ -17,4 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Levels/Lv2.unity
     guid: ea4c1e8713c188c49a72f9695b6220d4
+  - enabled: 1
+    path: Assets/Levels/SnowOneOfThem.unity
+    guid: c48efd2ef8aa3734e84efc7441594deb
   m_configObjects: {}
