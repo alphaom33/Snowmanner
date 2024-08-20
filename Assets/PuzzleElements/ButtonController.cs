@@ -18,7 +18,7 @@ public class ButtonController : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Box") && !pressed)
+        if ((other.CompareTag("Box") || other.CompareTag("Player")) && !pressed)
         {
             pressed = true;
             StartCoroutine(Animate(-1));
@@ -32,7 +32,7 @@ public class ButtonController : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
-        if (unpressable && other.CompareTag("Box"))
+        if (unpressable && (other.CompareTag("Box") || other.CompareTag("Player")))
         {
             pressed = false;
             StartCoroutine(Animate(1));

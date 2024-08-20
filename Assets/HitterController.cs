@@ -23,7 +23,7 @@ public class HitterController : WallController
         {
             player.GetComponent<Heighter>().Stop();
             Instantiate(wonkyFab).GetComponent<WonkyFab>().DoTheThing(current);
-            player.transform.position = new Vector3(player.transform.position.x, heights[current - 1], player.transform.position.z);
+            player.transform.position = new Vector3(player.transform.position.x, player.transform.position.y + heights[current - 1], player.transform.position.z);
             return false;
         }
 
@@ -32,6 +32,6 @@ public class HitterController : WallController
 
     private void OnDrawGizmos()
     {
-        GetComponentsInChildren<Transform>()[1].position = new Vector3(transform.position.x, floorHeights[current - 1], transform.position.z);
+        GetComponentsInChildren<Transform>()[1].position = new Vector3(transform.position.x, transform.position.y + floorHeights[current - 1], transform.position.z);
     }
 }

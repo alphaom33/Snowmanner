@@ -93,6 +93,7 @@ public class PlayerGrower : MonoBehaviour
 
     void Grow(Vector3 _)
     {
+        Aaaaahhhh();
         bool animated = false;
 
         RaycastHit hit;

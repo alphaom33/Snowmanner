@@ -13,6 +13,8 @@ public class TileMaker : MonoBehaviour
 
     public Grid grid;
 
+    public float height;
+
     public string tagger;
 
     public bool AlreadyTaken(Vector3 position)
