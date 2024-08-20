@@ -567,6 +567,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: plank grid spot FIXED NOW
       objectReference: {fileID: 0}
+    - target: {fileID: 8983493103373200755, guid: ab05f66a5da26d148a20002a31c7502b,
+        type: 3}
+      propertyPath: m_TagString
+      value: Plank
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1129,7 +1134,12 @@ PrefabInstance:
     - target: {fileID: 4342843669301941577, guid: c62948bf0b8d67541acc15ecbc34f93c,
         type: 3}
       propertyPath: m_Layer
-      value: 6
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4342843669301941577, guid: c62948bf0b8d67541acc15ecbc34f93c,
+        type: 3}
+      propertyPath: m_TagString
+      value: Sand
       objectReference: {fileID: 0}
     - target: {fileID: 5372314755658770101, guid: c62948bf0b8d67541acc15ecbc34f93c,
         type: 3}
@@ -1408,6 +1418,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: plank grid spot FIXED NOW
       objectReference: {fileID: 0}
+    - target: {fileID: 8983493103373200755, guid: ab05f66a5da26d148a20002a31c7502b,
+        type: 3}
+      propertyPath: m_TagString
+      value: Plank
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1591,6 +1606,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: plank grid spot FIXED NOW
       objectReference: {fileID: 0}
+    - target: {fileID: 8983493103373200755, guid: ab05f66a5da26d148a20002a31c7502b,
+        type: 3}
+      propertyPath: m_TagString
+      value: Plank
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1678,6 +1698,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: plank grid spot FIXED NOW
+      objectReference: {fileID: 0}
+    - target: {fileID: 8983493103373200755, guid: ab05f66a5da26d148a20002a31c7502b,
+        type: 3}
+      propertyPath: m_TagString
+      value: Plank
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2028,7 +2053,12 @@ PrefabInstance:
     - target: {fileID: 4342843669301941577, guid: c62948bf0b8d67541acc15ecbc34f93c,
         type: 3}
       propertyPath: m_Layer
-      value: 6
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4342843669301941577, guid: c62948bf0b8d67541acc15ecbc34f93c,
+        type: 3}
+      propertyPath: m_TagString
+      value: Sand
       objectReference: {fileID: 0}
     - target: {fileID: 5372314755658770101, guid: c62948bf0b8d67541acc15ecbc34f93c,
         type: 3}
@@ -2204,7 +2234,12 @@ PrefabInstance:
     - target: {fileID: 4342843669301941577, guid: c62948bf0b8d67541acc15ecbc34f93c,
         type: 3}
       propertyPath: m_Layer
-      value: 6
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4342843669301941577, guid: c62948bf0b8d67541acc15ecbc34f93c,
+        type: 3}
+      propertyPath: m_TagString
+      value: Sand
       objectReference: {fileID: 0}
     - target: {fileID: 5372314755658770101, guid: c62948bf0b8d67541acc15ecbc34f93c,
         type: 3}
@@ -2566,6 +2601,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: plank grid spot FIXED NOW
       objectReference: {fileID: 0}
+    - target: {fileID: 8983493103373200755, guid: ab05f66a5da26d148a20002a31c7502b,
+        type: 3}
+      propertyPath: m_TagString
+      value: Plank
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2652,7 +2692,12 @@ PrefabInstance:
     - target: {fileID: 4342843669301941577, guid: c62948bf0b8d67541acc15ecbc34f93c,
         type: 3}
       propertyPath: m_Layer
-      value: 6
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4342843669301941577, guid: c62948bf0b8d67541acc15ecbc34f93c,
+        type: 3}
+      propertyPath: m_TagString
+      value: Sand
       objectReference: {fileID: 0}
     - target: {fileID: 5372314755658770101, guid: c62948bf0b8d67541acc15ecbc34f93c,
         type: 3}
@@ -3392,6 +3437,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: plank grid spot FIXED NOW
       objectReference: {fileID: 0}
+    - target: {fileID: 8983493103373200755, guid: ab05f66a5da26d148a20002a31c7502b,
+        type: 3}
+      propertyPath: m_TagString
+      value: Plank
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3492,6 +3542,74 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1018538538}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1024638464
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1248689628876926752, guid: 4ce1f2faae5d998499035e1a559bea29,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 10.741909
+      objectReference: {fileID: 0}
+    - target: {fileID: 1248689628876926752, guid: 4ce1f2faae5d998499035e1a559bea29,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1248689628876926752, guid: 4ce1f2faae5d998499035e1a559bea29,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -3.8531632
+      objectReference: {fileID: 0}
+    - target: {fileID: 1248689628876926752, guid: 4ce1f2faae5d998499035e1a559bea29,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1248689628876926752, guid: 4ce1f2faae5d998499035e1a559bea29,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1248689628876926752, guid: 4ce1f2faae5d998499035e1a559bea29,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1248689628876926752, guid: 4ce1f2faae5d998499035e1a559bea29,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1248689628876926752, guid: 4ce1f2faae5d998499035e1a559bea29,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1248689628876926752, guid: 4ce1f2faae5d998499035e1a559bea29,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1248689628876926752, guid: 4ce1f2faae5d998499035e1a559bea29,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2150903160220202948, guid: 4ce1f2faae5d998499035e1a559bea29,
+        type: 3}
+      propertyPath: m_Name
+      value: fixera
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 4ce1f2faae5d998499035e1a559bea29, type: 3}
 --- !u!1001 &1038844228
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3674,7 +3792,12 @@ PrefabInstance:
     - target: {fileID: 4342843669301941577, guid: c62948bf0b8d67541acc15ecbc34f93c,
         type: 3}
       propertyPath: m_Layer
-      value: 6
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4342843669301941577, guid: c62948bf0b8d67541acc15ecbc34f93c,
+        type: 3}
+      propertyPath: m_TagString
+      value: Sand
       objectReference: {fileID: 0}
     - target: {fileID: 5372314755658770101, guid: c62948bf0b8d67541acc15ecbc34f93c,
         type: 3}
@@ -3870,6 +3993,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: plank grid spot FIXED NOW
       objectReference: {fileID: 0}
+    - target: {fileID: 8983493103373200755, guid: ab05f66a5da26d148a20002a31c7502b,
+        type: 3}
+      propertyPath: m_TagString
+      value: Plank
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3956,7 +4084,12 @@ PrefabInstance:
     - target: {fileID: 4342843669301941577, guid: c62948bf0b8d67541acc15ecbc34f93c,
         type: 3}
       propertyPath: m_Layer
-      value: 6
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4342843669301941577, guid: c62948bf0b8d67541acc15ecbc34f93c,
+        type: 3}
+      propertyPath: m_TagString
+      value: Sand
       objectReference: {fileID: 0}
     - target: {fileID: 5372314755658770101, guid: c62948bf0b8d67541acc15ecbc34f93c,
         type: 3}
@@ -4385,6 +4518,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: plank grid spot FIXED NOW
       objectReference: {fileID: 0}
+    - target: {fileID: 8983493103373200755, guid: ab05f66a5da26d148a20002a31c7502b,
+        type: 3}
+      propertyPath: m_TagString
+      value: Plank
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4578,7 +4716,12 @@ PrefabInstance:
     - target: {fileID: 4342843669301941577, guid: c62948bf0b8d67541acc15ecbc34f93c,
         type: 3}
       propertyPath: m_Layer
-      value: 6
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4342843669301941577, guid: c62948bf0b8d67541acc15ecbc34f93c,
+        type: 3}
+      propertyPath: m_TagString
+      value: Sand
       objectReference: {fileID: 0}
     - target: {fileID: 5372314755658770101, guid: c62948bf0b8d67541acc15ecbc34f93c,
         type: 3}
@@ -4767,6 +4910,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: plank grid spot FIXED NOW
+      objectReference: {fileID: 0}
+    - target: {fileID: 8983493103373200755, guid: ab05f66a5da26d148a20002a31c7502b,
+        type: 3}
+      propertyPath: m_TagString
+      value: Plank
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -5085,7 +5233,12 @@ PrefabInstance:
     - target: {fileID: 4342843669301941577, guid: c62948bf0b8d67541acc15ecbc34f93c,
         type: 3}
       propertyPath: m_Layer
-      value: 6
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4342843669301941577, guid: c62948bf0b8d67541acc15ecbc34f93c,
+        type: 3}
+      propertyPath: m_TagString
+      value: Sand
       objectReference: {fileID: 0}
     - target: {fileID: 5372314755658770101, guid: c62948bf0b8d67541acc15ecbc34f93c,
         type: 3}
@@ -5184,7 +5337,12 @@ PrefabInstance:
     - target: {fileID: 4342843669301941577, guid: c62948bf0b8d67541acc15ecbc34f93c,
         type: 3}
       propertyPath: m_Layer
-      value: 6
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4342843669301941577, guid: c62948bf0b8d67541acc15ecbc34f93c,
+        type: 3}
+      propertyPath: m_TagString
+      value: Sand
       objectReference: {fileID: 0}
     - target: {fileID: 5372314755658770101, guid: c62948bf0b8d67541acc15ecbc34f93c,
         type: 3}
@@ -5491,7 +5649,12 @@ PrefabInstance:
     - target: {fileID: 4342843669301941577, guid: c62948bf0b8d67541acc15ecbc34f93c,
         type: 3}
       propertyPath: m_Layer
-      value: 6
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4342843669301941577, guid: c62948bf0b8d67541acc15ecbc34f93c,
+        type: 3}
+      propertyPath: m_TagString
+      value: Sand
       objectReference: {fileID: 0}
     - target: {fileID: 5372314755658770101, guid: c62948bf0b8d67541acc15ecbc34f93c,
         type: 3}
@@ -5586,6 +5749,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: plank grid spot FIXED NOW
       objectReference: {fileID: 0}
+    - target: {fileID: 8983493103373200755, guid: ab05f66a5da26d148a20002a31c7502b,
+        type: 3}
+      propertyPath: m_TagString
+      value: Plank
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5672,7 +5840,12 @@ PrefabInstance:
     - target: {fileID: 4342843669301941577, guid: c62948bf0b8d67541acc15ecbc34f93c,
         type: 3}
       propertyPath: m_Layer
-      value: 6
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4342843669301941577, guid: c62948bf0b8d67541acc15ecbc34f93c,
+        type: 3}
+      propertyPath: m_TagString
+      value: Sand
       objectReference: {fileID: 0}
     - target: {fileID: 5372314755658770101, guid: c62948bf0b8d67541acc15ecbc34f93c,
         type: 3}
@@ -5770,7 +5943,12 @@ PrefabInstance:
     - target: {fileID: 8983493103373200755, guid: ab05f66a5da26d148a20002a31c7502b,
         type: 3}
       propertyPath: m_Layer
-      value: 6
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8983493103373200755, guid: ab05f66a5da26d148a20002a31c7502b,
+        type: 3}
+      propertyPath: m_TagString
+      value: Plank
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -5941,7 +6119,12 @@ PrefabInstance:
     - target: {fileID: 4342843669301941577, guid: c62948bf0b8d67541acc15ecbc34f93c,
         type: 3}
       propertyPath: m_Layer
-      value: 6
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4342843669301941577, guid: c62948bf0b8d67541acc15ecbc34f93c,
+        type: 3}
+      propertyPath: m_TagString
+      value: Sand
       objectReference: {fileID: 0}
     - target: {fileID: 5372314755658770101, guid: c62948bf0b8d67541acc15ecbc34f93c,
         type: 3}
@@ -6124,6 +6307,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: plank grid spot FIXED NOW
+      objectReference: {fileID: 0}
+    - target: {fileID: 8983493103373200755, guid: ab05f66a5da26d148a20002a31c7502b,
+        type: 3}
+      propertyPath: m_TagString
+      value: Plank
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -6490,7 +6678,12 @@ PrefabInstance:
     - target: {fileID: 4342843669301941577, guid: c62948bf0b8d67541acc15ecbc34f93c,
         type: 3}
       propertyPath: m_Layer
-      value: 6
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4342843669301941577, guid: c62948bf0b8d67541acc15ecbc34f93c,
+        type: 3}
+      propertyPath: m_TagString
+      value: Sand
       objectReference: {fileID: 0}
     - target: {fileID: 5372314755658770101, guid: c62948bf0b8d67541acc15ecbc34f93c,
         type: 3}
@@ -6607,7 +6800,12 @@ PrefabInstance:
     - target: {fileID: 4342843669301941577, guid: c62948bf0b8d67541acc15ecbc34f93c,
         type: 3}
       propertyPath: m_Layer
-      value: 6
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4342843669301941577, guid: c62948bf0b8d67541acc15ecbc34f93c,
+        type: 3}
+      propertyPath: m_TagString
+      value: Sand
       objectReference: {fileID: 0}
     - target: {fileID: 5372314755658770101, guid: c62948bf0b8d67541acc15ecbc34f93c,
         type: 3}
@@ -6943,6 +7141,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: plank grid spot FIXED NOW
       objectReference: {fileID: 0}
+    - target: {fileID: 8983493103373200755, guid: ab05f66a5da26d148a20002a31c7502b,
+        type: 3}
+      propertyPath: m_TagString
+      value: Plank
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7040,7 +7243,12 @@ PrefabInstance:
     - target: {fileID: 8983493103373200755, guid: ab05f66a5da26d148a20002a31c7502b,
         type: 3}
       propertyPath: m_Layer
-      value: 6
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8983493103373200755, guid: ab05f66a5da26d148a20002a31c7502b,
+        type: 3}
+      propertyPath: m_TagString
+      value: Plank
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -7224,6 +7432,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: plank grid spot FIXED NOW
+      objectReference: {fileID: 0}
+    - target: {fileID: 8983493103373200755, guid: ab05f66a5da26d148a20002a31c7502b,
+        type: 3}
+      propertyPath: m_TagString
+      value: Plank
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -7625,6 +7838,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: plank grid spot FIXED NOW
       objectReference: {fileID: 0}
+    - target: {fileID: 8983493103373200755, guid: ab05f66a5da26d148a20002a31c7502b,
+        type: 3}
+      propertyPath: m_TagString
+      value: Plank
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7650,3 +7868,4 @@ SceneRoots:
   - {fileID: 1493998248}
   - {fileID: 868822832}
   - {fileID: 1451789227}
+  - {fileID: 1024638464}
